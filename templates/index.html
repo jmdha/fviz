@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="{{url_for('.static', filename='style.css')}}">
+<script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.min.js"></script>
+<body>
+	<div hx-get="/stories" hx-trigger="load, every 60s" hx-target="this"></div>
+</body>
+</html>
+
+

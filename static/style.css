@@ -1,0 +1,37 @@
+:root {
+  --primary_color: rgb(159, 192, 162);
+  --secondary_color: rgb(245, 194, 118);
+  --background_color: rgb(39, 42, 44);
+  --surface_color: rgb(51, 53, 56);
+  --surface_color_hover: rgb(64, 66, 70);
+  --default_white: rgb(242, 245, 243);
+  --text_color: rgb(170, 170, 170);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html, a {
+  background-color: var(--background_color);
+  color: var(--text_color);
+}
+
+.stories {
+	width: 200px;
+	max-height: 100vh;
+	overflow-y: scroll;
+}
+
+.story {
+	text-decoration: none;
+}
+
+.story-date {
+	font-size: 0.5em
+}
+
+.story-title {
+	font-size: 1em
+}
