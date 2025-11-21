@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
 <link rel="stylesheet" type="text/css" href="{{url_for('.static', filename='style.css')}}">
 <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.min.js"></script>
+</head>
 <body>
-	<div hx-get="/stories" hx-trigger="load, every 60s" hx-target="this"></div>
+<div style="display: flex;">
+	<div
+		style="flex 1; max-width: 200px;"
+		hx-get="/stories" hx-trigger="load, every 20s" hx-target="this"
+	></div>
+	<div
+		style="flex: 1; overflow: hidden;"
+		hx-get="/map" hx-trigger="load, every 120s" hx-target="this"
+	></div>
+</div>
 </body>
 </html>
 
