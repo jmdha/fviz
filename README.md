@@ -2,8 +2,8 @@
 
 ## local setup
 ```
-git clone https://github.com/jmdha/jnews.git
-cd jnews
+git clone https://github.com/jmdha/fviz.git
+cd fviz
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
 .venv/bin/python setup.py # This needs to be run first
