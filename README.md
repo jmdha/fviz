@@ -7,7 +7,7 @@ The analysis runs a periodic semantic analysis of various RSS-feeds to find citi
 
 
 ## data
-The city data (Names & Coordinates) is taken from https://geonames.org.
+The city data (Names & Coordinates) is taken from https://download.geonames.org/export/dump/.
 
 ## technologies
  - [flask](https://flask.palletsprojects.com/en/stable/)
