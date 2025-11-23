@@ -17,7 +17,7 @@ The city data (Names & Coordinates) is taken from https://geonames.org.
  - [spacy](https://spacy.io/)
 
 ## todo
-  - spacy denotes both cities and countries as 'GPE', as such, whenever a country is mentioned it is mistaken as a city. This leads to some false positives, e.g. Venezuela -> A city in Cube, Mexico -> A city in Philippines.
+  - spacy denotes both cities and countries as 'GPE', as such, whenever a country is mentioned it is mistaken as a city. This leads to some false positives, e.g. Venezuela -> A city in Cuba, Mexico -> A city in Philippines.
 
 ## local setup
 ```
