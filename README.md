@@ -19,6 +19,7 @@ The city data (Names & Coordinates) is taken from https://geonames.org.
 ## todo
   - spacy denotes both cities and countries as 'GPE', as such, whenever a country is mentioned it is mistaken as a city. This leads to some false positives, e.g. Venezuela -> A city in Cuba, Mexico -> A city in Philippines.
   - handle duplicate city names. currently the one with the biggest population is chosen, however, that simply means the smaller cities are never linked
+  - cache generated map instead of re-rendering on each request
 
 ## local setup
 ```
