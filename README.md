@@ -1,4 +1,4 @@
-# fivz
+# fviz
 An analysis of the frequency in which cities are mentioned in the news.
 
 The analysis runs a periodic semantic analysis of various RSS-feeds to find cities, which are then stored in an SQLite database, and then served on a Flask & Leaflet website.
