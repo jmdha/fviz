@@ -1,4 +1,23 @@
-#
+# fivz
+An analysis of the frequency in which cities are mentioned in the news.
+
+The analysis runs a periodic semantic analysis of various RSS-feeds to find cities, which are then stored in an SQLite database, and then served on a Flask & Leaflet website.
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d00e770d-4262-4a49-b457-17da19429c54" />
+
+
+## data
+The city data (Names & Coordinates) is taken from https://geonames.org.
+
+## technologies
+ - [flask](https://flask.palletsprojects.com/en/stable/)
+ - [leaflet](https://leafletjs.com/)
+ - [sqlite3](https://sqlite.org/index.html)
+ - [feedparser](https://pypi.org/project/feedparser/)
+ - [spacy](https://spacy.io/)
+
+## todo
+  - spacy denotes both cities and countries as 'GPE', as such, whenever a country is mentioned it is mistaken as a city. This leads to some false positives, e.g. Venezuela -> A city in Cube, Mexico -> A city in Philippines.
 
 ## local setup
 ```
