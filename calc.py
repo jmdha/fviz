@@ -73,6 +73,21 @@ def story_exists(url: str) -> bool:
     cur.execute(s)
     return cur.fetchone() is not None
 
+def add_links(story_id: int, title: str):
+    cur  = conn.cursor()
+    for word in title.split():
+        s = "SELECT * FROM loc WHERE name=\"{word}\""
+        s = s.format(word=word)
+        cur.execute(s)
+        loc_id = cur.fetchone()
+        if loc_id is not None:
+            loc_id = loc_id[0]
+            s = """INSERT INTO link(story, loc)
+                   VALUES({story_id}, {loc_id})"""
+            s = s.format(story_id=story_id, loc_id=loc_id)
+            cur.execute(s)
+    conn.commit()
+
 def sync():
     feeds = load_feeds()
     cur  = conn.cursor()
@@ -90,8 +105,10 @@ def sync():
                    VALUES(\"{title}\", \"{url}\")"""
             s = s.format(title=title, url=url)
             cur.execute(s)
+            cur.execute("SELECT last_insert_rowid()")
+            i = cur.fetchone()[0]
+            add_links(i, title)
     conn.commit()
-    conn.close()
 
 setup()
 while True:
